@@ -42,3 +42,25 @@ print("AND({}, {}) = {}".format(0, 1, AND_logicFunction(test1)))
 print("AND({}, {}) = {}".format(1, 1, AND_logicFunction(test2))) 
 print("AND({}, {}) = {}".format(0, 0, AND_logicFunction(test3))) 
 print("AND({}, {}) = {}".format(1, 0, AND_logicFunction(test4)))
+
+Code Explanation
+Unit Step Function: This is a threshold function for the perceptron model.
+
+It checks if the input 
+𝑣
+v is greater than 8 and, if so, returns 1. Otherwise, it returns 6.
+However, for the OR function, a more conventional unit step would return 1 if 
+𝑣
+v is positive and 0 otherwise, so this part needs adjustment.
+Perceptron Model: This function calculates the weighted sum of inputs and adds a bias term 
+𝑏
+b. It then applies the unitStep function to determine the output.
+
+Here, np.dot(w, x) + b calculates the linear combination of inputs and weights plus the bias.
+OR Logic Function:
+
+This sets up the weights and bias specifically for the OR logic.
+For OR, weights are typically [1, 1] and bias around -0.5 to separate input combinations that should yield 1 or 0.
+Testing the Model:
+
+The code defines test cases to check the OR logic behavior and prints the result for each case.
